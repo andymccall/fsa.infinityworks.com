@@ -48,7 +48,7 @@ public class AuthorityTest {
      * with a known value
      */
     @Test
-    public void Authority_setAndgGetLocalName_Passes() throws Exception {
+    public void Authority_setAndGetLocalName_Passes() throws Exception {
         testAuthority.setName(test1Name);
         Assert.assertEquals(testAuthority.getName(), test1Name);
     }

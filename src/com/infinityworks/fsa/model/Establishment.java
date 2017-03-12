@@ -24,8 +24,20 @@ public class Establishment {
         return ratingValue;
     }
 
+    public void setRatingValue(String ratingValue) {
+
+        this.ratingValue = ratingValue;
+
+    }
+
     public String getLocalAuthorityBusinessID() {
         return localAuthorityBusinessID;
+    }
+
+    public void setLocalAuthorityBusinessID(String localAuthorityBusinessID) {
+
+        this.localAuthorityBusinessID = localAuthorityBusinessID;
+
     }
 
     @Override
