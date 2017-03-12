@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 
 /**
- * The Establishments class is the controller for
+ * The Establishments class is
  *
  * @author  Andy McCall
  * @version 0.1

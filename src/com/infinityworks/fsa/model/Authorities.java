@@ -5,9 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 
 /**
- * The FsaController class is the controller for
- * the application.  All web requests are routed
- * through this controller.
+ * The Authorities class
  *
  * @author  Andy McCall
  * @version 0.1

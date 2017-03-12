@@ -1,9 +1,8 @@
 package com.infinityworks.fsa.model;
 
 /**
- * The Country enum contains details
- * about a post status, such as if it is
- * a draft, published
+ * The Country enum is allows naming of
+ * the country the authority is in
  *
  * @author  Andy McCall
  * @version 0.2

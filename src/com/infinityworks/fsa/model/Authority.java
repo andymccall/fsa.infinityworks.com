@@ -3,11 +3,12 @@ package com.infinityworks.fsa.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * Created by andymccall on 09/03/2017.
+ * The Authority class
+ *
+ * @author  Andy McCall
+ * @version 0.1
+ * @since   2017-03-11
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Authority {
