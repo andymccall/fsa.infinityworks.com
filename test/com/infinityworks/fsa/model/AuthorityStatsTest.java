@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
  * @since 2017-03-11
  */
 public class AuthorityStatsTest {
-    
+
     final private String test1localAuthorityBusinessID = "200";
     final private String test1RatingValue = "5";
     final private String test2localAuthorityBusinessID = "201";
