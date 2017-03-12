@@ -41,9 +41,9 @@ To run the projects unit tests using maven on the command line run the following
 
 Testing has been performed using JUnit and Mockito.  Code coverage reports have been produced using Jacoco and are presented by Codecov.io.
 
-A sunburst chart for the code coverage is below.  The inner-most circle is the entire project, moving away from the center are folders then, finally, a single file. The size and color of each slice is represented by the number of statements and the coverage, respectively.
+A Grid chart for the project is below.  Each block represents a single file in the project. The size and color of each block is represented by the number of statements and the coverage, respectively.
 
-![coverage](https://codecov.io/gh/andymccall/fsa.infinityworks.com/branch/master/graphs/sunburst.svg?token=NsaA3UgmQv)
+![coverage](https://codecov.io/gh/andymccall/fsa.infinityworks.com/branch/master/graphs/tree.svg?token=NsaA3UgmQv)
 
 If working with a Business Analyst on the project it would have been beneficial to use Cucumber for BDD.  For the purpose of this test I have not included this.
 
