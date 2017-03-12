@@ -19,11 +19,10 @@ public class Application {
             LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
-        logger.info("Entering main()");
+        logger.info("Starting up");
 
         SpringApplication.run(Application.class, args);
 
-        logger.info("Exiting main()");
     }
 
 }

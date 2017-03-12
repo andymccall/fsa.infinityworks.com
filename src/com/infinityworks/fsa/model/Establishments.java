@@ -5,7 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 
 /**
- * The Establishments class is
+ * The Establishments class contains all the establishments
+ * for a county
  *
  * @author  Andy McCall
  * @version 0.1

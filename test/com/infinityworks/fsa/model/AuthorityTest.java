@@ -31,6 +31,10 @@ public class AuthorityTest {
 
         testAuthority = new Authority();
 
+        testAuthority.setLocalAuthorityId(test1LocalAuthorityId);
+
+        testAuthority.setName(test1Name);
+
     }
 
     /**
@@ -39,7 +43,6 @@ public class AuthorityTest {
      */
     @Test
     public void Authority_setAndgGetLocalAuthorityId_Passes() throws Exception {
-        testAuthority.setLocalAuthorityId(test1LocalAuthorityId);
         Assert.assertEquals(testAuthority.getLocalAuthorityId(), test1LocalAuthorityId);
     }
 
@@ -49,7 +52,6 @@ public class AuthorityTest {
      */
     @Test
     public void Authority_setAndGetLocalName_Passes() throws Exception {
-        testAuthority.setName(test1Name);
         Assert.assertEquals(testAuthority.getName(), test1Name);
     }
 
@@ -59,8 +61,6 @@ public class AuthorityTest {
      */
     @Test
     public void toString_StringReturned_Passes() throws Exception {
-        testAuthority.setLocalAuthorityId(test1LocalAuthorityId);
-        testAuthority.setName(test1Name);
         Assert.assertEquals( "toString() has failed",
                 "Authority{LocalAuthorityId=200, Name='QWERTY'}", testAuthority.toString());
     }
