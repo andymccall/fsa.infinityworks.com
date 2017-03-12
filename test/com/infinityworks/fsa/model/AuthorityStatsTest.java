@@ -20,8 +20,7 @@ import static org.junit.Assert.*;
  * @since 2017-03-11
  */
 public class AuthorityStatsTest {
-
-
+    
     final private String test1localAuthorityBusinessID = "200";
     final private String test1RatingValue = "5";
     final private String test2localAuthorityBusinessID = "201";
@@ -101,7 +100,7 @@ public class AuthorityStatsTest {
     }
 
     /**
-     * Tests AuthorityStats.getF()
+     * Tests AuthorityStats.getFiveStarPercent()
      * with a known value
      */
     @Test
@@ -109,6 +108,58 @@ public class AuthorityStatsTest {
         Assert.assertEquals( "getFiveStarPercent() has failed",
                 25.0,
                 testAuthorityStats.getFiveStarPercent(),
+                0.5);
+
+    }
+
+    /**
+     * Tests AuthorityStats.getFourStarPercent()
+     * with a known value
+     */
+    @Test
+    public void AuthorityStats_getFourStarPercent_Passes() throws Exception {
+        Assert.assertEquals( "getFourStarPercent() has failed",
+                12.5,
+                testAuthorityStats.getFourStarPercent(),
+                0.5);
+
+    }
+
+    /**
+     * Tests AuthorityStats.getThreeStarPercent()
+     * with a known value
+     */
+    @Test
+    public void AuthorityStats_getThreeStarPercent_Passes() throws Exception {
+        Assert.assertEquals( "getThreeStarPercent() has failed",
+                12.5,
+                testAuthorityStats.getThreeStarPercent(),
+                0.5);
+
+    }
+
+    /**
+     * Tests AuthorityStats.getTwoStarPercent()
+     * with a known value
+     */
+    @Test
+    public void AuthorityStats_getTwoStarPercent_Passes() throws Exception {
+        Assert.assertEquals( "getTwoStarPercent() has failed",
+                12.5,
+                testAuthorityStats.getTwoStarPercent(),
+                0.5);
+
+    }
+
+    /**
+     * Tests AuthorityStats.getOneStarPercent()
+     * with a known value
+     */
+    @Test
+    public void AuthorityStats_getOneStarPercent_Passes() throws Exception {
+        Assert.assertEquals( "getOneStarPercent() has failed",
+                25.0,
+                testAuthorityStats.getOneStarPercent(),
                 0.5);
 
     }
