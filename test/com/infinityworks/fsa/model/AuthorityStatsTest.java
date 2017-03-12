@@ -101,6 +101,19 @@ public class AuthorityStatsTest {
     }
 
     /**
+     * Tests AuthorityStats.getF()
+     * with a known value
+     */
+    @Test
+    public void AuthorityStats_getFiveStarPercent_Passes() throws Exception {
+        Assert.assertEquals( "getFiveStarPercent() has failed",
+                25.0,
+                testAuthorityStats.getFiveStarPercent(),
+                0.5);
+
+    }
+
+    /**
      * Tests AuthorityStats.toString()
      * with a known value
      */
@@ -109,9 +122,6 @@ public class AuthorityStatsTest {
         Assert.assertEquals( "toString() has failed",
                 "AuthorityStats{fiveStar=2, fourStar=1, threeStar=1, twoStar=1, oneStar=2, exempt=1, pass=0, needsImprovement=0, error=0, country=ENGLISH}",
                 testAuthorityStats.toString());
-
-
-
 
     }
 
