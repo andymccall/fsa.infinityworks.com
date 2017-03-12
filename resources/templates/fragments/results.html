@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="english">
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Rating</th>
+            <th>Percentage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>5-star</td>
+            <td th:text="${authorityStats.getFiveStarPercent() + '%'}"></td>
+        </tr>
+        <tr>
+            <td>4-star</td>
+            <td th:text="${authorityStats.getFourStarPercent() + '%'}"></td>
+        </tr>
+        <tr>
+            <td>3-star</td>
+            <td th:text="${authorityStats.getThreeStarPercent() + '%'}"></td>
+        </tr>
+        <tr>
+            <td>2-star</td>
+            <td th:text="${authorityStats.getTwoStarPercent() + '%'}"></td>
+        </tr>
+        <tr>
+            <td>1-star</td>
+            <td th:text="${authorityStats.getOneStarPercent() + '%'}"></td>
+        </tr>
+        <tr>
+            <td>Exempt</td>
+            <td th:text="${authorityStats.getExemptPercent() + '%'}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</head>
+
+<head th:fragment="scottish">
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Rating</th>
+            <th>Percentage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Pass and Eat Safe</td>
+            <td th:text="${authorityStats.getPassAndEatSafePercent() + '%'}"></td>
+        </tr>
+        <tr>
+            <td>Pass</td>
+            <td th:text="${authorityStats.getPassPercent() + '%'}"></td>
+        </tr>
+        <tr>
+            <td>Needs Improvement</td>
+            <td th:text="${authorityStats.getNeedsImprovementPercent() + '%'}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</head>
+
+<body>
+
+</body>
+</html>

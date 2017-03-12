@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <div th:include="fragments/head :: head"></div>
+
+    <script type="text/javascript">
+        function displayAuthorityStats(value) {
+            window.location.replace("/" + value);
+        }
+    </script>
+
+</head>
+
+<body>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Infinity Works Tech Test</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="form-group">
+                <label class="col-md-3 control-label">Authority</label>
+                <div class="col-lg-3" th:object="${Authority}">
+                    <select class="form-control" id="authority" name="authority"
+                            onchange="displayAuthorityStats(value)">
+                        <option value="">Select Authority</option>
+                        <option th:each="authority : ${authoritiesList}"
+                                th:value="${authority.LocalAuthorityId}"
+                                th:text="${authority.Name}">
+
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div th:if="${authorityStats != null and authorityStats.country == T(com.infinityworks.fsa.model.Country).ENGLISH}"
+                 th:include="fragments/results :: english"></div>
+            <div th:if="${authorityStats != null and authorityStats.country == T(com.infinityworks.fsa.model.Country).SCOTTISH}"
+                 th:include="fragments/results :: scottish"></div>
+
+        </div>
+    </div>
+</div>
+
+<footer>
+
+    <div th:include="fragments/footer :: footer"></div>
+
+    <script th:inline="javascript">
+        jQuery(document).ready(function ($) {
+            $('select').find('option[value=[[${localAuthorityId}]]]').attr('selected', 'selected');
+        });
+    </script>
+
+
+</footer>
+
+
+</body>
+
+</html>
