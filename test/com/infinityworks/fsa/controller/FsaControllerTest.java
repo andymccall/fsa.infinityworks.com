@@ -47,9 +47,6 @@ public class FsaControllerTest {
     @Before
     public void setUp() throws Exception {
 
-        // this must be called for the @Mock annotations above to be processed
-        // and for the mock service to be injected into the controller under
-        // test.
         MockitoAnnotations.initMocks(this);
 
         mockAuthoritiesService = mock(AuthoritiesService.class);
@@ -61,11 +58,16 @@ public class FsaControllerTest {
     }
 
     @Test
-
     public void FsaController_IndexIsGot_Passes() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("index"));
+    }
+
+    @Test
+    public void FsaController_AuthorityIsGot_Passes() throws Exception {
+        mockMvc.perform(get("/200"))
+                .andExpect(status().isOk());
     }
 
 }

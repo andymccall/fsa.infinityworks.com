@@ -72,8 +72,6 @@ public class EstablishmentServiceImplTest {
     public void EstablishmentsService_getEstablishmentsByLocalAuthorityId_Passes() throws Exception {
          List<Establishment> establishmentList = establishmentServiceImpl.getEstablishmentsByLocalAuthorityId(localAuthorityId);
 
-        System.out.println(establishmentList);
-
         Assert.assertEquals("getEstablishmentsByLocalAuthorityId() failed",
                 test1localAuthorityBusinessID,
                 establishmentList.get(0).getLocalAuthorityBusinessID());
